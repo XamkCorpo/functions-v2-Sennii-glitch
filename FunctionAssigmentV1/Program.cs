@@ -34,7 +34,6 @@
         }
         static bool TarkistaTaysiIkainen(int age)
         {
-
             return age >= 18;
         }
         static void VertaaNimea(string name, string compareTo)
@@ -50,13 +49,19 @@
             int age = KysyIka();
 
             Tulostanimijaika(name, age);
-            bool isFullAge = TarkistaTaysiIkainen(age);
-            if (age >= 18)
-                Console.WriteLine("You are an adult.");
-            else
-                Console.WriteLine("You are not an adult.");
-            VertaaNimea(name, "Matti");
 
+
+            bool isFullAge = TarkistaTaysiIkainen(age);
+            if (isFullAge)
+            {
+                Console.WriteLine("You are an adult.");
+            }
+            else
+            {
+                Console.WriteLine("You are not an adult.");
+            }
+
+            VertaaNimea(name, "Matti");
 
 
         }
