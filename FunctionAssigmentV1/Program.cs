@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Ask the user for their name and validate the input
+        /// </summary>
+        /// <returns>Returns valid input</returns>
         static string KysyNimi()
         {
             while (true)
@@ -15,6 +19,10 @@
             }
 
         }
+        /// <summary>
+        /// Ask user for their age and validate the input
+        /// </summary>
+        /// <returns>Returns valid input</returns>
         static int KysyIka()
         {
             int age = 0;
@@ -28,14 +36,29 @@
             }
 
         }
+        /// <summary>
+        /// Print users name and age
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="age"></param>
         static void Tulostanimijaika(string name, int age)
         {
             Console.WriteLine($"Your name is {name} and your age is {age}.");
         }
+        /// <summary>
+        /// Check if user is an adult
+        /// </summary>
+        /// <param name="age"></param>
+        /// <returns>true/false</returns>
         static bool TarkistaTaysiIkainen(int age)
         {
             return age >= 18;
         }
+        /// <summary>
+        /// Compares users name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="compareTo"></param>
         static void VertaaNimea(string name, string compareTo)
         {
             if (name.Equals(compareTo, StringComparison.OrdinalIgnoreCase))
