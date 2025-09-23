@@ -22,7 +22,7 @@
                 }
                 bool oikeaValinta = false;
 
-                switch (LaskutoimitusTyyppi)
+                switch (valinta)
                 {
                     case 1:
                         if (valinta == 1)
@@ -66,7 +66,7 @@
 
             }
 
-            return valinta;
+            return LaskutoimitusTyyppi;
 
 
         }
