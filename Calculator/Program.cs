@@ -114,6 +114,27 @@
         }
 
 
+        static double Add(double a, double b)
+        {
+            return a + b;
+        }
+        static double Subtract(double a, double b)
+        {
+            return a - b;
+        }
+        static double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+        static double Divide(double a, double b)
+        {
+            return a / b;
+        }
+        static string TulostaTulos()
+        {
+            Console.WriteLine("Tulos: ");
+            return "";
+        }
 
 
         static void Main(string[] args)
@@ -134,10 +155,7 @@
             //double result = CalculateOperation(valinta, num1, num2)
         }
 
-        static double Add(double a, double b)
-        {
-            return a + b;
-        }
+
 
 
     }
