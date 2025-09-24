@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        /// <summary>
+        /// Kysyy käyttäjältä laskutoimitustyypin
+        /// </summary>
+        /// <returns>laskutoimitustyyppi</returns>
         static int ValitseLaskutoimitus()
         {
             int valinta;
@@ -70,6 +74,10 @@
 
 
         }
+        /// <summary>
+        /// Kysyy käyttäjältä numeron
+        /// </summary>
+        /// <returns>number</returns>
         static double KysyLuku()
         {
             double num1;
@@ -93,23 +101,53 @@
 
 
 
-
+        /// <summary>
+        /// Plussalasku
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns>a+b</returns>
         static double Add(double a, double b)
         {
             return a + b;
         }
+        /// <summary>
+        /// miinuslasku
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns>a-b</returns>
         static double Subtract(double a, double b)
         {
             return a - b;
         }
+        /// <summary>
+        /// kertolasku
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns>a*b</returns>
         static double Multiply(double a, double b)
         {
             return a * b;
         }
+        /// <summary>
+        /// jakolasku
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns>a/b</returns>
         static double Divide(double a, double b)
         {
             return a / b;
         }
+        /// <summary>
+        /// Laskee laskutoimituksen
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <param name="num1"></param>
+        /// <param name="num2"></param>
+        /// <returns>tulos</returns>
         static double CalculateOperation(int operation, double num1, double num2)
         {
             double result = 0;
@@ -134,6 +172,11 @@
 
             return result;
         }
+        /// <summary>
+        /// Muuttaa symboliksi
+        /// </summary>
+        /// <param name="valinta"></param>
+        /// <returns>symboli</returns>
         private static string GetOperationSymbol(int valinta)
         {
             string symbol = "";
@@ -155,10 +198,16 @@
             }
             return symbol;
         }
-        static string TulostaTulos()
+        /// <summary>
+        /// Tulostaa tuloksen
+        /// </summary>
+        /// <param name="num1"></param>
+        /// <param name="num2"></param>
+        /// <param name="symbol"></param>
+        /// <param name="result"></param>
+        static void TulostaTulos(double num1, double num2, string symbol, double result)
         {
-            Console.WriteLine($"Tulos: {num1} {GetOperationSymbol} {num2} = {result} ");
-            return "";
+            Console.WriteLine($"Tulos: {num1} {symbol} {num2} = {result} ");
         }
 
 
@@ -173,22 +222,16 @@
             double num2 = KysyLuku();
 
 
-            //tee funktio joka kysyy numeron 1, muista validoita että syöte on numero. Palauta doulbe tyyppinen numero
-            //double num1 = AksNumber();
-
-            //double num2 = AskNumber();
-
-            //Tee funktio joka suorittaa operaation
-            //Funktio ottaa syötteenä operaatio sekä numerot joille operaatio tehdään
+            
 
             double result = CalculateOperation(valinta, num1, num2);
 
-            //Muuta valinta numero symbooliksi, tee tälle oma funktio
-            //Eli jos numero on 1 niin silloin tiedät, että symboli on +
+            
 
             string symbol = GetOperationSymbol(valinta);
 
-            //Tulosta tulos
+            
+            TulostaTulos(num1, num2, symbol, result);
         }
 
 
